@@ -4,12 +4,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "node api.js && vite",
+    "build": "node api.js && tsc -b && vite build",
     "lint": "eslint . --max-warnings=0",
     "test": "vitest run",
     "typecheck": "tsc -b --pretty false",
-    "audit": "npm audit --omit=dev --audit-level=high"
+    "audit": "npm audit --omit=dev --audit-level=high",
+    "a11y": "eslint . --max-warnings=0"
   },
   "dependencies": {
     "@stellar/freighter-api": "6.0.1",
